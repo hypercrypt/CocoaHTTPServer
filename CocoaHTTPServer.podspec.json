@@ -2,7 +2,7 @@
   "name": "CocoaHTTPServer",
   "version": "2.3",
   "license": "BSD",
-  "summary": "A small, lightweight, embeddable HTTP server for Mac OS X or iOS applications.",
+  "summary": "A small, lightweight, embeddable HTTP server for Mac OS X, iOS or tvOS applications.",
   "homepage": "https://github.com/robbiehanson/CocoaHTTPServer",
   "authors": {
     "Robbie Hanson": "cocoahttpserver@googlegroups.com"
@@ -15,9 +15,16 @@
   "requires_arc": true,
   "platforms": {
     "ios": "5.0",
-    "osx": "10.7"
+    "osx": "10.7",
+	"tvos": "9.0"
   },
   "ios": {
+    "frameworks": [
+      "CFNetwork",
+      "Security"
+    ]
+  },
+  "tvos": {
     "frameworks": [
       "CFNetwork",
       "Security"
